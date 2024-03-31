@@ -15,7 +15,7 @@ clock = pygame.time.Clock()
 
 game_grid = Grid()
 
-block = LBlock()
+block = TBlock()
 
 while True:
     for event in pygame.event.get():
