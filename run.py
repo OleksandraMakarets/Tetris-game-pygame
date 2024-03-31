@@ -1,5 +1,6 @@
 import pygame
 import sys
+from game import Game
 
 # Define the dark_blue color using RGB values
 dark_blue = (44, 44, 127)
@@ -11,7 +12,7 @@ pygame.display.set_caption("Tetris")
 
 clock = pygame.time.Clock()
 
-game_grid = Grid()
+game = Game()
 
 while True:
     for event in pygame.event.get():
@@ -20,6 +21,8 @@ while True:
             sys.exit()
     # Drawing
     screen.fill(dark_blue)
+    game.draw(screen)
+
     pygame.display.update()
     clock.tick(60)
 
