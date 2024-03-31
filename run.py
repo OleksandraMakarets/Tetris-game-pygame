@@ -15,7 +15,7 @@ while True:
             pygame.quit()
             sys.exit()
     #Drawing
-    screen.fill(darl_blue)
+    screen.fill(dark_blue)
     pygame.display.update()
     clock.tick(60)
 
