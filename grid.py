@@ -25,3 +25,9 @@ class Grid:
 
         return [dark_grey, green, red, orange, yellow, purple, cyan, blue]
 
+    def draw(self):
+        for row in range(self.num_rows):
+            for column in range(self.num_cols):
+                cell_value = self.grid[row][column]
+                cell_rect = pygame.Rect(column*self.cell_size, row*self.cell_size, self.cell_size, self.cell_size)
+
