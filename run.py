@@ -1,7 +1,5 @@
 import pygame
 import sys
-from grid import Grid 
-from blocks import *
 
 # Define the dark_blue color using RGB values
 dark_blue = (44, 44, 127)
@@ -15,9 +13,6 @@ clock = pygame.time.Clock()
 
 game_grid = Grid()
 
-block = TBlock()
-block.move(4,3)
-
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -25,7 +20,6 @@ while True:
             sys.exit()
     # Drawing
     screen.fill(dark_blue)
-    game_grid.draw(screen)
     pygame.display.update()
     clock.tick(60)
 
