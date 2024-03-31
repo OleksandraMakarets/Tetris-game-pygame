@@ -52,7 +52,8 @@ class Game:
 			self.grid.grid[position.row][position.column] = self.current_block.id
 		self.current_block = self.next_block
 		self.next_block = self.get_random_block()
-        self.grid.clear_full_rows()
+        rows_cleared = self.grid.clear_full_rows()
+		self.update_score(rows_cleared, 0)
         if self.block_fits() == False:
             self.game_over = True
     
