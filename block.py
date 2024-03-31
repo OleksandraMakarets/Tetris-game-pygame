@@ -10,3 +10,5 @@ class Block:
 		self.column_offset = 0
 		self.rotation_state = 0
         self.colors = Colors.get_cell_colors()
+    
+    def draw(self, screen):
