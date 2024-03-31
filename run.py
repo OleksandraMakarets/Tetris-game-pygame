@@ -1,6 +1,7 @@
 import pygame
 import sys
 from grid import Grid 
+from blocks import *
 
 # Define the dark_blue color using RGB values
 dark_blue = (44, 44, 127)
