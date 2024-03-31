@@ -16,6 +16,14 @@ class Block:
 		self.row_offset += rows
 		self.column_offset += columns
     
+    def get_cell_positions(self):
+		tiles = self.cells[self.rotation_state]
+		moved_tiles = []
+		for position in tiles:
+			position = Position(position.row + self.row_offset, position.column + self.column_offset)
+			moved_tiles.append(position)
+		return moved_tiles
+    
     def draw(self, screen):
         tiles = self.get_cell_positions()
 		for tile in tiles:
