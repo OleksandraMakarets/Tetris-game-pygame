@@ -8,6 +8,8 @@ pygame.init()
 title_font = pygame.font.Font(None, 40)
 score_surface = title_font.render("Score", True, Colors.white)
 
+score_rect = pygame.Rect(320, 55, 170, 60)
+
 screen = pygame.display.set_mode((500, 620))
 pygame.display.set_caption("Tetris")
 
@@ -39,6 +41,7 @@ while True:
 			game.move_down()
     # Drawing
     screen.fill(Colors.dark_blue)
+    screen.blit(score_surface, (365, 20, 50, 50))
     game.draw(screen)
     
 
