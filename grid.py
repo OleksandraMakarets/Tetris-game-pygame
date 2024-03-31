@@ -31,6 +31,10 @@ class Grid:
 				return False
 		return True
     
+    def clear_row(self, row):
+		for column in range(self.num_cols):
+			self.grid[row][column] = 0
+    
 
     def draw(self, screen):
         for row in range(self.num_rows):
